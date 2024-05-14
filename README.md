@@ -10,6 +10,8 @@ install the dependencies:
 npm install
 ```
 
+[[!Delete any documents that exist within the "cache" directory that were created during prior generate executions!]]
+
 Second, generate the embeddings of the documents in the `./data` directory:
 
 ```
