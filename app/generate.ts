@@ -41,7 +41,7 @@ async function generateDatasource() {
     console.log(`getting docutments...`);
     const documents = await getDocuments();
     documents.forEach((doc) => {
-      console.log(`document ${doc.name} loaded`);
+      console.log(`document ${doc.id_} loaded`);
     });
     console.log(`Generating VectorStoreIndex.fromDocuments...`);
     await VectorStoreIndex.fromDocuments(documents, {
