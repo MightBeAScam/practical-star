@@ -17,9 +17,9 @@ npm run generate
 ```
 
 EXPECTED RESULT:
-- generated doc_store.json
-- generated index_store.json
-- generated vector_store.json
+- generated cache/doc_store.json
+- generated cache/index_store.json
+- generated cache/vector_store.json
 
 ACTUAL RESULT:
 - Error generating text embeddings:
