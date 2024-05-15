@@ -4,6 +4,7 @@ import {
   OpenAI,
   OpenAIEmbedding,
   Settings,
+  SimpleNodeParser
 } from "llamaindex";
 
 export const initSettings = async () => {
@@ -48,6 +49,15 @@ function initOpenAI() {
     dimensions: process.env.EMBEDDING_DIM
       ? parseInt(process.env.EMBEDDING_DIM)
       : undefined,
+  });
+  Settings.nodeParser = new SimpleNodeParser({
+    chunkSize: process.env.CHUNK_SIZE
+    ? parseInt(process.env.CHUNK_SIZE)
+    : undefined,
+    chunkOverlap: process.env.CHUNK_OVERLAP
+    ? parseInt(process.env.CHUNK_OVERLAP)
+    : undefined,
+    splitLongSentences: true,
   });
 }
 
